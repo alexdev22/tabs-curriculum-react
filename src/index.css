@@ -1,13 +1,106 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62.5%;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 3rem;
+  margin: 1.5rem;
+}
+
+.companies {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.companies__company {
+  margin: 1rem;
+  border: 0;
+  cursor: pointer;
+  font-size: 2rem;
+  background: transparent;
+}
+
+.companies__company--active-company {
+  text-decoration: underline;
+  text-decoration-color: tomato;
+  text-decoration-thickness: 0.3rem;
+}
+
+.card {
+  font-size: 1.8rem;
+}
+
+.card__title,
+.card__company,
+.card__date,
+.card__duties {
+  margin: 1.5rem;
+}
+
+.card__duties {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 2rem;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.card__date {
+  font-weight: 700;
+  color: rgb(122, 122, 122);
+}
+.card__company {
+  background: rgb(212, 212, 212);
+  padding: 1rem;
+  border-radius: 1rem;
+  width: auto;
+  width: fit-content;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card__icon {
+  color: orange;
+  margin-right: 2rem;
+  font-size: 2rem;
+  width: 20px;
+}
+
+@media (max-width: 750px) {
+  main {
+    width: 95vw;
+  }
+  .section {
+    flex-direction: column;
+  }
+  .companies {
+    display: flex;
+    flex-direction: row;
+  }
 }
